@@ -1,0 +1,24 @@
+{
+  "name": "starter_gulp_git",
+  "version": "1.0.0",
+  "description": "Starter gulp with Sass tween & js init",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quentinhocde/starter_gulp.git"
+  },
+  "author": "Quentin Hocdé",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quentinhocde/starter_gulp/issues"
+  },
+  "homepage": "https://github.com/quentinhocde/starter_gulp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "require-dir": "^0.3.0"
+  }
+}
