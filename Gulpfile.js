@@ -1,11 +1,13 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-
 
 var requireDir = require('require-dir');
-requireDir('./gulp/tasks', { recurse: true });
+requireDir('./js/gulp/tasks', { recurse: true });
 
 
-gulp.task('default', function() {
- 	gulp.watch('styles/sass/**/*.scss',['styles']);
+gulp.task('default', ['build']);
+
+gulp.task('prod', function() {
+ 	gulp.watch('styles/sass/**/*.scss',['styles-prod']);
+
+
 });
