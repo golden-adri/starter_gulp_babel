@@ -1,13 +1,19 @@
 'use strict';
+import Utils from "./Utils";
 
-// import utils from "Utils";
+
+
+var utils = new Utils();
 
 class App {
 	init(){
-		alert('init');
+
+		console.log('ready');
 	}
 }
 
 
 var app = new App();
-app.init();
+
+
+window.onload=app.init();
