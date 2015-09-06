@@ -15,5 +15,9 @@ export default class Utils {
 	    return null;
 	}
 
+	static getScrollTop() {
+	     return (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
+	}
+
 }
 
