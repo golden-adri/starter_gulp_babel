@@ -11,11 +11,14 @@ To compile all sass without minification & babel with sourcemaps
 ```
 gulp
 
+```
 
 To compile for prod : Babel without sourcemaps & the minify css :
 
 ```
 gulp prod
+
+```
 
 
 ## Demo
