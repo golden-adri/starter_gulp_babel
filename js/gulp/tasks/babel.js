@@ -21,3 +21,18 @@ gulp.task('babel', function() {
     	.pipe(sourcemaps.write('./'))
     	.pipe(gulp.dest('./js/dist'));
 });
+
+
+gulp.task('babel-prod', function() {
+    browserify('./js/App.js', { debug: true })
+    	.add(require.resolve('babel/polyfill'))
+    	.transform(babelify)
+    	.bundle()
+    	.on('error', util.log.bind(util, 'Browserify Error'))
+    	.pipe(source('bundle.js'))
+    	.pipe(buffer())
+    	.pipe(sourcemaps.init({loadMaps: true}))
+    	.pipe(uglify({ mangle: false }))
+    	.pipe(sourcemaps.write('./'))
+    	.pipe(gulp.dest('./js/dist'));
+});
