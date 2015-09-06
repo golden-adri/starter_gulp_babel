@@ -6,17 +6,6 @@ Each tasks of Gulp are separate in the folder /js/gulp/tasks
 
 The class Utils is useful for cross-browser utils.
 
-To compile all sass without minification & babel with sourcemaps 
-
-```
-gulp
-```
-
-To compile for prod : Babel without sourcemaps & the minify css :
-
-```
-gulp prod
-```
 
 ## Installation
 
@@ -24,6 +13,20 @@ Launch
 ```
 npm install
 ```
+
+## Instructions
+
+To launch all the tasks for work (js with sourcemaps) launch :
+```
+gulp
+```
+
+To launch all the tasks for prod (js without sourcemaps & minify css) launch :
+```
+gulp prod
+```
+
+
 
 ## Version
 
