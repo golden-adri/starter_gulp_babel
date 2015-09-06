@@ -18,10 +18,12 @@ To compile for prod : Babel without sourcemaps & the minify css :
 gulp prod
 ```
 
+## Installation
 
-## Demo
-
-<a href="http://codepen.io/quentinhocde/full/EaMyZg">http://codepen.io/quentinhocde/full/EaMyZg</a>
+Launch 
+```
+npm install
+```
 
 ## Version
 
