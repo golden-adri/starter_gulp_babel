@@ -8,8 +8,7 @@ The class Utils is useful for cross-browser utils.
 
 
 ## Installation
-
-Launch 
+ 
 ```
 npm install
 ```
