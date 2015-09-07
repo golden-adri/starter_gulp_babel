@@ -9,6 +9,12 @@ class App {
 	init(){
 
 		console.log('ready');
+
+		//launch RAF
+		requestAnimationFrame(this.raf());
+	}
+	raf(){
+		requestAnimationFrame(this.raf());
 	}
 }
 
