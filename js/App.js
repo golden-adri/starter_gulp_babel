@@ -4,17 +4,23 @@ import Utils from "./Utils";
 
 
 var utils = new Utils();
-
+var raf = Utils.Raf();
 class App {
 	init(){
 
 		console.log('ready');
 
-		//launch RAF
-		requestAnimationFrame(this.raf());
+		//Request Animation Frame to handle scroll
+		function reqAF(){
+			this.handleRaf();
+			raf(reqAF.bind(this));
+		}
+		raf(reqAF.bind(this));
 	}
-	raf(){
-		requestAnimationFrame(this.raf());
+
+	handleRaf(){
+		
+
 	}
 }
 
