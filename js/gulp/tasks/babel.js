@@ -1,13 +1,13 @@
 var gulp = require('gulp')
-
-var browserify = require('browserify');
-var babelify= require('babelify');
-var util = require('gulp-util');
-var buffer = require('vinyl-buffer');
-var source = require('vinyl-source-stream');
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-
+    browserify = require('browserify')
+    babelify= require('babelify')
+    util = require('gulp-util')
+    buffer = require('vinyl-buffer')
+    source = require('vinyl-source-stream')
+    uglify = require('gulp-uglify')
+    sourcemaps = require('gulp-sourcemaps')
+    browserSync = require('browser-sync').create();
+    
 gulp.task('babel', function() {
     browserify('./js/App.js', { debug: true })
     	.add(require.resolve('babel/polyfill'))
@@ -19,7 +19,9 @@ gulp.task('babel', function() {
     	.pipe(sourcemaps.init({loadMaps: true}))
     	.pipe(uglify({ mangle: false }))
     	.pipe(sourcemaps.write('./'))
-    	.pipe(gulp.dest('./js/dist'));
+    	.pipe(gulp.dest('./js/dist'))
+        .pipe(browserSync.stream());
+
 });
 
 

@@ -19,6 +19,7 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "babelify": "^6.3.0",
+    "browser-sync": "^2.11.1",
     "browserify": "^11.0.1",
     "gulp": "^3.9.0",
     "gulp-minify-css": "^1.2.1",
